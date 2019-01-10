@@ -1,0 +1,168 @@
+<editor>
+    <help>/commander/pages/@PLUGIN_NAME@/@PLUGIN_KEY@_help?s=Administration&amp;ss=Plugins#runNCover</help>
+    <formElement>
+        <type>entry</type>
+        <label>NCover Installation Directory:</label>
+        <property>ncoverdir</property>
+        <required>0</required>
+        <documentation>Provide the absolute path of the NCover installation directory. It must end with a backslash (\).</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Target to Analyze:</label>
+        <property>target</property>
+        <required>1</required>
+        <documentation>Provide the absolute path of the element to analyze.</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Target Parameters:</label>
+        <property>targetparams</property>
+        <required>0</required>
+        <documentation>Additional commands to be entered for the target</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Output Report Filename:</label>
+        <property>outputreportname</property>
+        <required>0</required>
+        <documentation>Filename of the output report</documentation>
+    </formElement>
+    <formElement>
+        <type>select</type>
+        <label>Log Level:</label>
+        <property>loglevel</property>
+        <required>0</required>
+        <documentation>Select the log level to apply during analysis. Options are None, Normal, or Verbose.</documentation>
+        <option><name>None</name><value>none</value></option>
+        <option><name>Normal</name><value>normal</value></option>
+        <option><name>Verbose</name><value>verbose</value></option>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Collect Cyclomatic Complexity Coverage Information:</label>
+        <property>collectcyclomatic</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Collect cyclomatic complexity coverage information.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Collect Symbol Coverage Information:</label>
+        <property>collectsymbols</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Collect symbol coverage information.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Collect Branch Coverage Information:</label>
+        <property>collectbranch</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Collect branch information.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Collect Method Visits Coverage Information:</label>
+        <property>collectmethodvisits</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Collect Method Visits Information.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Minimum Cyclomatic Complexity Coverage:</label>
+        <property>requiredcyclomatic</property>
+        <required>0</required>
+        <value>75</value>
+        <documentation>Minimum Cyclomatic Complexity coverage. The build fails when thresholds are not met.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Minimum Symbol Coverage:</label>
+        <property>requiredsymbols</property>
+        <value>75</value>
+        <required>0</required>
+        <documentation>Minimum Symbol coverage. The build fails when thresholds are not met.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Minimum Method Visits Coverage:</label>
+        <property>requiredmethodvisits</property>
+        <value>75</value>
+        <required>0</required>
+        <documentation>Minimum Method Visits coverage. The build fails when thresholds are not met.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Minimum Branch Coverage:</label>
+        <property>requiredbranch</property>
+        <value>75</value>
+        <required>0</required>
+        <documentation>Minimum Branch coverage. The build fails when thresholds are not met.</documentation>
+    </formElement>
+    <formElement>
+        <type>checkbox</type>
+        <label>Allow Coverage on IIS:</label>
+        <property>iiscoverage</property>
+        <checkedValue>1</checkedValue>
+        <uncheckedValue>0</uncheckedValue>
+        <required>0</required>
+        <documentation>Collect coverage information of the local IIS install.</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Files to Exclude:</label>
+        <property>excludedfiles</property>
+        <required>0</required>
+        <documentation>Files to exclude</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Methods to Exclude:</label>
+        <property>excludedmethods</property>
+        <required>0</required>
+        <documentation>Methods to exclude</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Build ID:</label>
+        <property>buildid</property>
+        <required>0</required>
+        <documentation>Build ID to generate.</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Project Name:</label>
+        <property>projectname</property>
+        <required>0</required>
+        <documentation>Specifies the name of the project for HTML output. </documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Additional Commands for NCover.Console:</label>
+        <property>additionalconsolecommands</property>
+        <required>0</required>
+        <documentation>Additional commands to be entered for NCover.Console</documentation>
+    </formElement>
+    <formElement>
+        <type>textarea</type>
+        <label>Additional Commands for NCover.Reporting:</label>
+        <property>additionalreportingcommands</property>
+        <required>0</required>
+        <documentation>Additional commands to be entered for NCover.Reporting</documentation>
+    </formElement>
+    <formElement>
+        <type>entry</type>
+        <label>Working directory:</label>
+        <property>workingdir</property>
+        <required>0</required>
+        <value></value>
+        <documentation>Working directory</documentation>
+    </formElement>
+</editor>

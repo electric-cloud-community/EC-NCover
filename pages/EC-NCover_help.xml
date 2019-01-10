@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator"
+          content="HTML Tidy for Windows (vers 25 March 2009), see www.w3.org" />
+    <meta content="text/html; charset=us-ascii"
+          http-equiv="content-type" />
+
+    <title>ElectricFlow Plugin for NCover</title>
+    <link rel="stylesheet"
+          href="../../plugins/@PLUGIN_KEY@/pluginhelp.css"
+          type="text/css"
+          media="screen" />
+</head>
+
+<body>
+    <div class="help">
+        <h1>NCover</h1>
+
+        <p>Plugin Version @PLUGIN_VERSION@</p>
+        <hr style="margin-left: -10px; margin-top: 10px; height: 1px; width: 100%; color: #5981BD;"
+            noshade="noshade" />
+			
+		<p>July 1, 2015</p>	
+
+        <p>NCover is a .NET code coverage tool. There are two
+        non-related NCover products that do .NET code coverage.<br/>
+        There is an open source NCover that can be found on
+        Sourceforge and there is a company called NCover, LLC.<br/>
+        There has been additional development on both products
+        since this 2004 reference.</p>
+
+        <h2>NCover Links</h2>
+
+        <p>More information can be found at
+        <a href="http://www.ncover.com/">this website</a>.</p>
+
+        <h2>ElectricFlow Integration to NCover</h2>
+
+        <p>The plugin calls the NCover tool's "NCover.Console.exe"
+        command line and passes the user-provided parameters</p>
+
+        <h2>Integrated Version</h2>
+
+        <p>This plugin was developed and tested against version
+        3.4.18</p>
+
+        <h1>Plugin Procedures</h1>
+
+        <p>IMPORTANT: For all parameter descriptions below,
+        required parameters are shown in
+        <span class='required'>bold italics</span>.</p>
+
+        <div id="runNCover">
+            <a name='runNCover'
+                 id="runNCover"></a> 
+
+            <h3>runNCover</h3>
+
+            <p>The runNCover procedure allows you to measure the
+            code coverage of your .net applications</p>
+
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>NCover Installation Directory</td>
+
+                        <td>Provide the absolute path of the NCover
+                        installation directory. It must end with a
+                        backslash (\).</td>
+                    </tr>
+
+                    <tr>
+                        <td class='required'>Target to Analyze</td>
+
+                        <td>Provide the absolute path of the
+                        element to analyze. (Required)</td>
+                    </tr>
+
+                    <tr>
+                        <td>Target Parameters</td>
+
+                        <td>Additional commands to be entered for
+                        the target</td>
+                    </tr>
+
+                    <tr>
+                        <td>Output Report Filename</td>
+
+                        <td>Filename of the output report.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Log Level</td>
+
+                        <td>Select the log level to apply during
+                        analysis. Options are None, Normal, or
+                        Verbose.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Collect Cyclomatic Complexity Coverage
+                        Information</td>
+
+                        <td>Collect cyclomatic complexity coverage
+                        information</td>
+                    </tr>
+
+                    <tr>
+                        <td>Collect Symbol Coverage
+                        Information</td>
+
+                        <td>Collect symbol coverage
+                        information.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Collect Branch Coverage
+                        Information</td>
+
+                        <td>Collect branch information</td>
+                    </tr>
+
+                    <tr>
+                        <td>Collect Method Visits Coverage
+                        Information</td>
+
+                        <td>Collect Method Visits Information</td>
+                    </tr>
+
+                    <tr>
+                        <td>Minimum Cyclomatic Complexity
+                        Coverage</td>
+
+                        <td>Minimum Cyclomatic Complexity coverage.
+                        The build fails when thresholds are not
+                        met. Default is 75.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Minimum Symbol Coverage</td>
+
+                        <td>Minimum Symbol coverage. The build
+                        fails when thresholds are not met. Default
+                        is 75.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Minimum Method Visits Coverage</td>
+
+                        <td>Minimum Method Visits coverage. The
+                        build fails when thresholds are not met.
+                        Default is 75.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Minimum Branch Coverage</td>
+
+                        <td>Minimum Branch coverage. The build
+                        fails when thresholds are not met. Default
+                        is 75.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Allow Coverage on IIS</td>
+
+                        <td>Collect coverage information of the
+                        local IIS install.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Files to Exclude</td>
+
+                        <td>Files to exclude</td>
+                    </tr>
+
+                    <tr>
+                        <td>Methods to Exclude</td>
+
+                        <td>Methods to exclude</td>
+                    </tr>
+
+                    <tr>
+                        <td>Build ID</td>
+
+                        <td>Build ID to generate</td>
+                    </tr>
+
+                    <tr>
+                        <td>Project Name</td>
+
+                        <td>Specifies the name of the project for
+                        HTML output.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Additional Commands for
+                        NCover.Console</td>
+
+                        <td>Additional commands to be entered for
+                        NCover.Console</td>
+                    </tr>
+
+                    <tr>
+                        <td>Additional Commands for
+                        NCover.Reporting</td>
+
+                        <td>Additional commands to be entered for
+                        NCover.Reporting</td>
+                    </tr>
+
+                    <tr>
+                        <td>Working directory</td>
+
+                        <td>Working directory</td>
+                    </tr>
+                </tbody>
+            </table><img src="../../plugins/@PLUGIN_KEY@/images/Ncover-1.png"
+                 alt="Form" />
+        </div>
+
+        <h1>Examples and Use Cases</h1>
+
+        <p>In this example we are going to run Ncover on the Ncover
+        "ConsoleApplication" sample project. Normally located at:
+        <b>"C:\Program
+        Files\NCover\Samples\ConsoleApplication"</b></p>
+
+        <h2>Create a runNCover step from the step picker and fill
+        the parameter
+        panels</h2><img src="../../plugins/@PLUGIN_KEY@/images/Ncover-1.png"
+             alt="form" /> 
+
+        <h2>Run the
+        procedure</h2><img src="../../plugins/@PLUGIN_KEY@/images/Ncover-2.png"
+             alt="Result" /> 
+
+        <h2>Open the log
+        files</h2><img src="../../plugins/@PLUGIN_KEY@/images/Ncover-3.png"
+             alt="File" /><br />
+         <img src="../../plugins/@PLUGIN_KEY@/images/Ncover-4.png"
+             alt="Result-2" /> 
+
+        <h1>Release Notes</h1>
+		
+		<h2>@PLUGIN_KEY@ 2.0.2</h2>
+		<ul>
+			<li>Renamed ElectricCommander to ElectricFlow.</li>
+		</ul> 
+
+		<h2>@PLUGIN_KEY@ 2.0.1</h2>
+		<ul>
+			<li>Procedure name(s) were changed in the step picker section</li>
+		</ul> 
+		
+        <h2>@PLUGIN_KEY@ 2.0.0</h2>
+
+        <ul>
+            <li>Change Help page style</li>
+
+            <li>Code improvements</li>
+
+            <li>XML Parameter panels</li>
+        </ul>
+
+        <h2>@PLUGIN_KEY@ 1.0.0</h2>
+
+        <ul>
+            <li>runNCover procedure</li>
+        </ul>
+    </div>
+</body>
+</html>

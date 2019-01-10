@@ -1,0 +1,27 @@
+# -*-Perl-*-
+
+# NCover.ntest -
+#
+# Exercise basic components of EC-NCover plugin
+#
+# Copyright (c) 2005-2010 Electric Cloud, Inc.
+# All rights reserved
+
+use strict;
+use warnings;
+use ECTest;
+
+require "$::gTestFileDir/ncover-common.ntest";
+
+# read in setup and tests that are common to all EC-NCover plugin archives
+# system tests
+
+
+ntest "check-runNCover-present", {}, sub {
+    # Check that the plugin contains required components
+    my $xpath = $::N->getSteps("$::gPlugin_name","runNCover");
+    assertOK($xpath,"get steps");
+    assertEq("createCommandLine", $xpath->findvalue("//step[1]/stepName"), "step 1: createCommandLine");
+    assertEq("runCommandLine", $xpath->findvalue("//step[2]/stepName"), "step 2: runCommandLine");
+
+};
